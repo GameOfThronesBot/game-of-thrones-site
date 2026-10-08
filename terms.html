@@ -3,21 +3,275 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Terms of Service • Game of Thrones</title>
+  <meta name="description" content="Terms of Service for Game of Thrones.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --purple: #8b5cf6;
+      --purple-dark: #6d28d9;
+      --text: #f8f7ff;
+      --muted: #9b97a8;
+      --border: rgba(255,255,255,.08);
+      --bg: #050507;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(139,92,246,.22), transparent 34%),
+        radial-gradient(circle at 0% 70%, rgba(109,40,217,.09), transparent 30%),
+        var(--bg);
+      padding: 110px 20px 60px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .4;
+      background-image:
+        linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+      background-size: 50px 50px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+    }
+
+    nav {
+      position: fixed;
+      z-index: 10;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1050px, calc(100% - 32px));
+      height: 64px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(8,8,11,.75);
+      backdrop-filter: blur(20px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+      box-shadow: 0 0 25px rgba(139,92,246,.28);
+    }
+
+    .back {
+      color: #aaa6b6;
+      text-decoration: none;
+      font-size: 14px;
+      transition: .2s;
+    }
+
+    .back:hover {
+      color: white;
+    }
+
+    main {
+      position: relative;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+      animation: appear .7s ease both;
+    }
+
+    .label {
+      display: inline-block;
+      color: #b9a4ff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 68px);
+      letter-spacing: -.06em;
+      margin-bottom: 14px;
+      background: linear-gradient(180deg, #fff, #b9a4ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .intro {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .content {
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(255,255,255,.025);
+      box-shadow: 0 25px 80px rgba(0,0,0,.25);
+      animation: appear .9s ease both;
+    }
+
+    .content h2 {
+      font-size: 19px;
+      margin: 30px 0 10px;
+    }
+
+    .content h2:first-child {
+      margin-top: 0;
+    }
+
+    .content p {
+      color: #9995a5;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .updated {
+      margin-top: 32px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: #6f6b79 !important;
+      font-size: 13px !important;
+    }
+
+    footer {
+      position: relative;
+      text-align: center;
+      margin-top: 35px;
+      color: #686473;
+      font-size: 13px;
+    }
+
+    footer span {
+      color: #9783d1;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        top: 10px;
+        width: calc(100% - 20px);
+        height: 58px;
+        padding: 0 14px;
+      }
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .brand-icon {
+        width: 34px;
+        height: 34px;
+      }
+
+      .content {
+        padding: 25px;
+      }
+
+      body {
+        padding-top: 95px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Terms of Service</h1>
-  <p>These Terms of Service govern your use of the Game of Thrones Discord application.</p>
 
-  <h2>Use of the App</h2>
-  <p>You agree to use Game of Thrones in accordance with Discord's Terms of Service and Community Guidelines.</p>
+  <nav>
+    <a class="brand" href="index.html">
+      <span class="brand-icon">♛</span>
+      <span>Game of Thrones</span>
+    </a>
 
-  <h2>Availability</h2>
-  <p>We may update, modify, or discontinue features of the application when necessary.</p>
+    <a class="back" href="index.html">← Back to Home</a>
+  </nav>
 
-  <h2>Contact</h2>
-  <p>For support, please contact us through the official support server.</p>
+  <main>
 
-  <p>Last updated: October 2026</p>
+    <div class="header">
+      <div class="label">Legal</div>
+      <h1>Terms of Service</h1>
+      <p class="intro">
+        These Terms of Service govern your use of the Game of Thrones Discord application.
+      </p>
+    </div>
+
+    <div class="content">
+
+      <h2>Use of the App</h2>
+      <p>
+        You agree to use Game of Thrones in accordance with Discord's
+        Terms of Service and Community Guidelines.
+      </p>
+
+      <h2>Availability</h2>
+      <p>
+        We may update, modify, or discontinue features of the application
+        when necessary.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For support, please contact us through the official support server.
+      </p>
+
+      <p class="updated">
+        Last updated: October 2026
+      </p>
+
+    </div>
+
+  </main>
+
+  <footer>
+    Game of Thrones <span>• made with a little sparkle ✦</span>
+  </footer>
+
 </body>
 </html>
